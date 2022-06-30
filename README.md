@@ -7,5 +7,7 @@ Make a spigot server with a script
 Just the the command
 ```bash
 $   wget https://raw.githubusercontent.com/GatewayDuck/AutoSpigot/main/install.sh
+```
+```bash
 $   bash install.sh
 ```
