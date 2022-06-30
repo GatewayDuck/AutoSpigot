@@ -19,3 +19,20 @@ Tested with Ubuntu 20.04 - 21.04
 
 # System Requiments
 A server running Ubuntu 20.04 (some other systems may work) with a minimum of 4GB RAM and 2 CPU Cores.
+
+
+# Starting the server
+To start the server cd into the dir
+```bash
+$   cd (dir)/minecraftServers/(serverName)/
+```
+then run
+```bash
+./control start
+```
+this will automatly start the server with 3GBs of ram (there is no way to currently change that)
+
+if you are using the VPS you can use a program called `screen` to keep the server open even after u close out of ssh
+
+# Stopping the server
+bro u can't
