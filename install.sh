@@ -38,3 +38,4 @@ echo "By using this program, you agree you minecraft's elua.\nTo continue press 
 read yea
 
 wget https://raw.githubusercontent.com/GatewayDuck/AutoSpigot/main/eula.txt -O $dir/server/eula.txt
+
