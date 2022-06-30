@@ -11,3 +11,8 @@ $   wget https://raw.githubusercontent.com/GatewayDuck/AutoSpigot/main/install.s
 ```bash
 $   bash install.sh
 ```
+
+# OS
+Works with most Linux based OS
+
+Tested with Ubuntu 20.04 - 21.04
