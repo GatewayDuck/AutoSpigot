@@ -23,8 +23,8 @@ wget -O $dir/buildtools/BuildTools.jar  https://hub.spigotmc.org/jenkins/job/Bui
 echo "Please select a minecraft verison (1.19 to 1.18), PLEASE DO NOT ENTER ANY OTHER TEXT BUT THE VERISON (E.x : 1.19):"
 read mcverison
 cd $dir/buildtools
-java -jar $dir/buildtools/BuildTools.jar --rev $mcverison
-
+java -jar BuildTools.jar --rev $mcverison
+sleep 10
 cd ..
 cd ..
 cd ..
