@@ -32,4 +32,4 @@ cd ..
 mkdir $dir/server
 mv $dir/buildtools/spigot-$mcverison.jar $dir/server/spigot.jar
 
-wget https://raw.githubusercontent.com/GatewayDuck/AutoSpigot/main/control.sh -O $dir/controll
+wget https://raw.githubusercontent.com/GatewayDuck/AutoSpigot/main/control.sh -O $dir/control
