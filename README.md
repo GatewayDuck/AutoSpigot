@@ -35,6 +35,3 @@ this will automatly start the server with 3GBs of ram (there is no way to curren
 if you are using the VPS you can use a program called `screen` to keep the server open even after u close out of ssh
 
 you can read more [here](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-screen-on-an-ubuntu-cloud-server)
-
-# Stopping the server
-bro u can't
