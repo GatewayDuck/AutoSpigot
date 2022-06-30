@@ -33,3 +33,6 @@ mkdir $dir/server
 mv $dir/buildtools/spigot-$mcverison.jar $dir/server/spigot.jar
 
 wget https://raw.githubusercontent.com/GatewayDuck/AutoSpigot/main/control.sh -O $dir/control
+
+echo "By using this program, you agree you minecraft's elua.\nTo continue press enter:"
+read yea
