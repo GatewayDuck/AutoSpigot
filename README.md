@@ -35,3 +35,13 @@ this will automatly start the server with 3GBs of ram (there is no way to curren
 if you are using the VPS you can use a program called `screen` to keep the server open even after u close out of ssh
 
 you can read more [here](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-screen-on-an-ubuntu-cloud-server)
+
+you need java 8 for 1.16.x >
+
+you need java 16 for 1.17.x >
+
+you need java 17 for 1.18.x >
+
+and you need java 18 for 1.19.x >
+
+you can install all the javas and use a java switcher, but they java verison for the correct verison must be installed / used when creating the server
