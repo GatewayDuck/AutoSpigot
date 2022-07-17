@@ -47,3 +47,5 @@ wget https://raw.githubusercontent.com/GatewayDuck/AutoSpigot/main/eula.txt -O $
 
 # Working for ubuntu 20.04
 
+# sudo update-alternatives --config java
+# configs the java verison, use java 8 for veriosns below 1.17 use java 16 for 1.17 use java 17 for 1.18 and java 18 for 1.19
