@@ -15,7 +15,7 @@ $   bash install.sh
 # OS
 Works with most Linux based OS
 
-Tested with Ubuntu 20.04 - 21.04
+Tested with Ubuntu 20.04 - 22.04
 
 # System Requiments
 A server running Ubuntu 20.04 (some other systems may work) with a minimum of 4GB RAM and 2 CPU Cores.
