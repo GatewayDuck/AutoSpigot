@@ -1,6 +1,6 @@
 echo "Do you want to run the first time configs [Y/n]:"
 read runConfig
-if [ $runConfig = "Y" ] then 
+if [ $runConfig = "Y" ] ; then 
     sudo apt update && sudo apt upgrade
     sleep 1
     sudo apt install wget apt-transport-https gnupg nano screen
@@ -13,34 +13,62 @@ if [ $runConfig = "Y" ] then
     sleep 1
 fi
 
-echo "Enter the folder name that the minecraft server will be placed:"
-read folder
-mdir="./minecraftServers/"
-dir="./minecraftServers/$folder"
-mkdir $mdir 
-mkdir $dir
+echo "Are you editing a preexisting installion?" 
+read installed
+if [ $installed = "Y"] ; then 
+    echo "What is the folder name?"
+    read folder
+    mdir="./minecraftServers/"
+    dir="./minecraftServers/$folder"
+    echo "Are you changing the verison? [Y/n]: "
+    read chver
+    if [ $chver = "Y"] ; then 
+        rm $dir/spigot.jar $dir/eula.txt
+        echo "The files are now configed right, please rerun the script and choose install new instead of preinstall"
+        exit 1
+    fi
+    echo "Do you want to reset the world? [Y/n]: "
+    read reset
+    if [ $reset = "Y" ] ; then
+        echo "Are you sure, this can not be undone. [Y/n]: "
+        read $resetsu
+        if [ $resetsu = "Y" ] ; then
+           echo "Deleting files."
+           rm $dir/world -rf
+           sleep 3
+           echo "Done. Restart the server to see your changes."
+        fi
+    fi
+else 
+    echo "Enter the folder name that the minecraft server will be placed:"
+    read folder
+    mdir="./minecraftServers/"
+    dir="./minecraftServers/$folder"
+    mkdir $mdir 
+    mkdir $dir
 
-mkdir $dir/buildtools
-wget -O $dir/buildtools/BuildTools.jar  https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
-echo "Please select a minecraft verison:"
-read mcverison
-cd $dir/buildtools
-java -jar BuildTools.jar --rev $mcverison
-sleep 10
-cd ..
-cd ..
-cd ..
+    mkdir $dir/buildtools
+    wget -O $dir/buildtools/BuildTools.jar  https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
+    echo "Please select a minecraft verison:"
+    read mcverison
+    cd $dir/buildtools
+    java -jar BuildTools.jar --rev $mcverison
+    sleep 10
+    cd ..
+    cd ..
+    cd ..
 
-mkdir $dir/server
-mv $dir/buildtools/spigot-$mcverison.jar $dir/server/spigot.jar
+    mkdir $dir/server
+    mv $dir/buildtools/spigot-$mcverison.jar $dir/server/spigot.jar
 
-wget https://raw.githubusercontent.com/GatewayDuck/AutoSpigot/main/control.sh -O $dir/control
-chmod u+x $dir/control
+    wget https://raw.githubusercontent.com/GatewayDuck/AutoSpigot/main/control.sh -O $dir/control
+    chmod u+x $dir/control
 
-echo "By using this program, you agree you minecraft's elua.\nTo continue press enter:"
-read yea
+    echo "By using this program, you agree you minecraft's elua.\nTo continue press enter:"
+    read yea
 
-wget https://raw.githubusercontent.com/GatewayDuck/AutoSpigot/main/eula.txt -O $dir/server/eula.txt
+    wget https://raw.githubusercontent.com/GatewayDuck/AutoSpigot/main/eula.txt -O $dir/server/eula.txt
+fi
 
 
 
