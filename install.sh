@@ -22,7 +22,7 @@ if [ $installed = "Y"] ; then
     dir="./minecraftServers/$folder"
     echo "Are you changing the verison? [Y/n]: "
     read chver
-    if [ $chver = "Y"] ; then 
+    if [ $chver = "Y"] ; then
         rm $dir/spigot.jar $dir/eula.txt
         echo "The files are now configed right, please rerun the script and choose install new instead of preinstall"
         exit 1
@@ -68,6 +68,11 @@ else
     read yea
 
     wget https://raw.githubusercontent.com/GatewayDuck/AutoSpigot/main/eula.txt -O $dir/server/eula.txt
+
+    echo "Please write a motd for your minecraft server: "
+    read motd
+    wget https://raw.githubusercontent.com/GatewayDuck/AutoSpigot/main/server.properties -O $dir/server/server.properties
+    echo $motd > $dir/server/server.properties
 fi
 
 
