@@ -3,14 +3,14 @@ read runConfig
 if [ $runConfig = "Y" ] ; then 
     sudo apt update && sudo apt upgrade
     sleep 1
-    sudo apt install wget apt-transport-https gnupg nano screen
+    sudo apt install wget apt-transport-https gnupg -y
     sudo ufw allow OpenSSH
     sudo ufw allow 25565
     echo "Installing java verisons"
     sleep 1
     sudo apt install openjdk-17-jre-headless
     sudo apt install openjdk-16-jre-headless
-    sudo apt install openjdk-18-jre-headless
+    sudo apt install openjdk-8-jre-headless
     sleep 1
     sudo apt install git
     sleep 1
@@ -84,4 +84,3 @@ fi
 # Working for ubuntu 20.04
 
 # sudo update-alternatives --config java
-# configs the java verison, use java 8 for veriosns below 1.17 use java 16 for 1.17 use java 17 for 1.18 and java 18 for 1.19
