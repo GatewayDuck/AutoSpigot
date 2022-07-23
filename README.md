@@ -42,3 +42,5 @@ you need java 17 for 1.18.x >
 and you need java 18 for 1.19.x >
 
 you can install all the javas and use a java switcher, but they java verison for the correct verison must be installed / used when creating the server
+
+The next update will fix this problem
