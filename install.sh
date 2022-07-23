@@ -6,8 +6,11 @@ if [ $runConfig = "Y" ] ; then
     sudo apt install wget apt-transport-https gnupg nano screen
     sudo ufw allow OpenSSH
     sudo ufw allow 25565
-    sudo ufw enable
+    echo "Installing java verisons"
+    sleep 1
     sudo apt install openjdk-17-jre-headless
+    sudo apt install openjdk-16-jre-headless
+    sudo apt install openjdk-18-jre-headless
     sleep 1
     sudo apt install git
     sleep 1
